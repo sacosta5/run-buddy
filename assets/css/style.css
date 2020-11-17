@@ -301,8 +301,41 @@ section div {
     color: var(--primary-color);
     flex: 1;
 }
-.trainer img { 
+.trainer-img { 
     width: 100%;
+    min-height: 300px;
+    background-size: cover;
+    display: flex;
+    padding: 15px;
+    align-items: flex-end;
+    position: absolute;
+    overflow: hidden;
+}
+.trainer-img h3 {
+    position: relative;
+    z-index: auto;
+    font-size: 28px 22px;
+    margin-bottom: 5px;
+    top: 200px;
+    transition: 200px 0px;
+}
+.trainer-img h4 {
+    position:relative;
+    z-index: auto;
+    font-size: 28px 22px;
+    top: 200px;
+    transition: 200px 0px
+}
+.trainer-img::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(252, 225, 56, 0.3),#fce138);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: margin-right 2s;
 }
 .trainer-bio {
     padding: 25px;
@@ -320,14 +353,25 @@ section div {
 }
 .trainer-bio h3 {
     font-size: 28px;
+    display: none;
 }
 .trainer-bio h4 {
     font-weight: lighter;
     font-size: 22px;
     margin-bottom: 15px;
+    display: none;
 }
 .trainer-bio p {
     font-size: 17px;
+}
+.trainer-1 {
+    background-image: url("../images/trainer-1.jpg");
+}
+.trainer-2 {
+    background-image: url("../images/trainer-2.jpg");
+}
+.trainer-3 {
+    background-image: url("../images/trainer-3.jpg");
 }
 /* Reach out styles start*/
 
@@ -373,9 +417,6 @@ section div {
     margin-top: 5px;
     border-radius: 10px;
     background-color: rgba(255, 255, 255, 0.8)
-}
-.contact-form input, .contact-info address:focus{
-
 }
 .contact-form button { 
     width: 100%;
@@ -545,3 +586,5 @@ section div {
           order: 3;
       }
   }
+@media screen and (max-width: 768px) {
+}
